@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z = sy.symbols('a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z', real = True)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-3-376ff453e3bf>[0m in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m----> 1[0;31m [0ma[0m[0;34m,[0m [0mb[0m[0;34m,[0m [0mc[0m[0;34m,[0m [0md[0m[0;34m,[0m [0me[0m[0;34m,[0m [0mf[0m[0;34m,[0m [0mg[0m[0;34m,[0m [0mh[0m[0;34m,[0m [0mi[0m[0;34m,[0m [0mj[0m[0;34m,[0m [0mk[0m[0;34m,[0m [0ml[0m[0;34m,[0m [0mm[0m[0;34m,[0m [0mn[0m[0;34m,[0m [0mo[0m[0;34m,[0m [0mp[0m[0;34m,[0m [0mq[0m[0;34m,[0m [0mr[0m[0;34m,[0m [0ms[0m[0;34m,[0m [0mt[0m[0;34m,[0m [0mu[0m[0;34m,[0m [0mv[0m[0;34m,[0m [0mw[0m[0;34m,[0m [0mx[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mz[0m [0;34m=[0m [0msy[0m[0;34m.[0m[0msymbols[0m[0;34m([0m[0;34m'a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z'[0m[0;34m,[0m [0mreal[0m [0;34m=[0m [0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mNameError[0m: name 'sy' is not defined
+
