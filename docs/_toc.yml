@@ -1,0 +1,9 @@
+format: jb-book
+root: Pengantar
+chapters:
+- file: Sistem_Linier
+  sections:
+  - file: Eliminasi_Gaussian
+  - file: Solusi_Sistem
+  - file: Matrik_Inverse
+  - file: Faktorisasi_LU
